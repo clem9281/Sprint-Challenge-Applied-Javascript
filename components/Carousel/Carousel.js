@@ -19,22 +19,22 @@ class Carousel {
   }
   slideLeft() {
     let activeElement = this.imgElements[this.index];
-    // if this index is already the highest index, loop back to zero, otherwise increment once
-    let nextIndex = this.index === this.maxIndex ? 0 : this.index + 1;
-    let nextElement = this.imgElements[nextIndex];
-    // using tween from to in order to control where it looks like the images are coming from
-    TweenMax.fromTo(activeElement, 1, { right: 0 }, { right: "100%" });
-    TweenMax.fromTo(nextElement, 1, { right: "-100%" }, { right: 0 });
-    this.index = nextIndex;
-  }
-  slideRight() {
-    let activeElement = this.imgElements[this.index];
     let nextIndex = this.index === 0 ? this.maxIndex : this.index - 1;
     console.log(this.index, nextIndex);
     let nextElement = this.imgElements[nextIndex];
     console.log(nextElement);
     TweenMax.fromTo(activeElement, 1, { right: 0 }, { right: "-100%" });
     TweenMax.fromTo(nextElement, 1, { right: "100%" }, { right: 0 });
+    this.index = nextIndex;
+  }
+  slideRight() {
+    let activeElement = this.imgElements[this.index];
+    // if this index is already the highest index, loop back to zero, otherwise increment once
+    let nextIndex = this.index === this.maxIndex ? 0 : this.index + 1;
+    let nextElement = this.imgElements[nextIndex];
+    // using tween from to in order to control where it looks like the images are coming from
+    TweenMax.fromTo(activeElement, 1, { right: 0 }, { right: "100%" });
+    TweenMax.fromTo(nextElement, 1, { right: "-100%" }, { right: 0 });
     this.index = nextIndex;
   }
 }
