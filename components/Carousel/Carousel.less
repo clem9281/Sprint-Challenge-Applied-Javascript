@@ -5,7 +5,6 @@
   position: relative;
   overflow: hidden;
   margin-top: 16px;
-  background: black;
   @media (min-width: 1200px) {
     width: 1200px;
   }
@@ -20,7 +19,7 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
-    z-index: 999;
+    z-index: 1;
     &:hover {
       color: @lambda-times-color-primary;
       background-color: @lambda-times-color-white;
@@ -41,6 +40,7 @@
     .width-100();
     position: absolute;
     right: -100%;
+    z-index: 0;
     // display: none;
   }
 }
