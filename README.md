@@ -48,7 +48,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 5. What is a component?
 
-   A component is a reusable piece of code that can be used to build elements that are similar in style or functionality. It helps keep our code DRY.
+   A component is programming concept where you build a reusable piece of code that can be used to build elements that are similar in style or functionality. It helps keep our code DRY.
 
 ### Git Set up
 
